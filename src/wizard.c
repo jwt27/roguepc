@@ -10,7 +10,7 @@
 #include "curses.h"
 
 #ifdef WIZARD
-static int	get_num(int *place);
+static int	get_num(void);
 #endif
 
 
@@ -148,7 +148,7 @@ create_obj(void)
 	else if (obj->o_type == GOLD)
 	{
 		msg("how much?");
-		get_num(&obj->o_goldval, stdscr);
+		obj->o_goldval = get_num();
 	}
 	add_pack(obj, FALSE);
 }
@@ -272,12 +272,11 @@ show_map(void)
 
 static
 int
-get_num(int *place)
+get_num(void)
 {
 	char numbuf[12];
 
 	getinfo(numbuf,10);
-	*place = atoi(numbuf);
-	return(*place);
+	return(atoi(numbuf));
 }
 #endif  // WIZARD

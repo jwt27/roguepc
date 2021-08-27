@@ -479,7 +479,7 @@ extern bool amulet, after, again, door_stop, expert, fastmode, faststate,
 //@ originally a bool. See extern.c, move.c, misc.c
 extern unsigned char was_trapped;
 #ifdef WIZARD
-bool wizard;
+extern bool wizard;
 #endif
 
 extern bool p_know[], r_know[], s_know[], ws_know[];

@@ -321,7 +321,7 @@ int is_me;
  */
 unsigned char was_trapped = FALSE;		/* Was a trap sprung */
 #ifdef WIZARD
-bool wizard = FALSE;			/* True if allows wizard commands */
+bool wizard = TRUE;			/* True if allows wizard commands */
 #endif
 bool bailout = FALSE;
 char take;				/* Thing the rogue is taking */

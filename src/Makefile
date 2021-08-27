@@ -17,6 +17,11 @@ LDLIBS:=
 # Defines from original Rogue code turned on by default here:
 CFLAGS+=-DMINROG
 
+# Enable Wizard (cheat) mode, for testing.
+ifdef WIZARD
+CFLAGS+=-DWIZARD
+endif
+
 # New defines: ROGUE_*
 ifdef ROGUE_RELEASE
 CFLAGS+=-s -O2

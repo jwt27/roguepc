@@ -153,7 +153,7 @@ get_prefix()
 	case 'q': case 'r': case 's': case 'z':
 	case 't': case '.':
 #ifdef WIZARD
-	case CTRL(D): case 'C':
+	case 'C':
 #endif //WIZARD
 		break;
 	default:
